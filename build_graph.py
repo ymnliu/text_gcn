@@ -15,7 +15,7 @@ from scipy.spatial.distance import cosine
 if len(sys.argv) != 2:
 	sys.exit("Use: python build_graph.py <dataset>")
 
-datasets = ['20ng', 'R8', 'R52', 'ohsumed', 'mr']
+datasets = ['20ng', 'R8', 'R52', 'ohsumed', 'mr', 'own', 'i2b2']
 # build corpus
 dataset = sys.argv[1]
 
@@ -370,6 +370,7 @@ for i in range(vocab_size):
 
 ally = np.array(ally)
 
+print("Shapes: x, y, tx, ty, allx, ally")
 print(x.shape, y.shape, tx.shape, ty.shape, allx.shape, ally.shape)
 
 '''
